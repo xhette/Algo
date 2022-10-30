@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Algo.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/scss/custom.bootstrap.min.css" />
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-green">
-            <div class="container">
+            <div class="container d-flex flex-wrap justify-content-md-center justify-content-xs-between align-items-center">
                 <a href="/"><img src="/img/logo.png" class="mainlogo m-3"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -20,19 +24,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center flex-wrap">
                     <ul class="navbar-nav flex-grow-1 d-flex justify-content-center">
                         <li class="menu-item m-2">
-                            <a is-active-route class="menu-item-link active" asp-area="" asp-controller="Home" asp-action="Index">О нас</a>
+                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Index">О нас</a>
                         </li>
                         <li class="menu-item m-2">
-                            <a is-active-route class="menu-item-link" asp-area="" asp-controller="Home" asp-action="Privacy">Наши продукты</a>
+                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Products">Наши продукты</a>
                         </li>
                         <li class="menu-item m-2">
-                            <a is-active-route class="menu-item-link" asp-area="" asp-controller="Home" asp-action="Privacy">Портфолио</a>
+                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Portfolio">Портфолио</a>
                         </li>
                         <li class="menu-item m-2">
-                            <a is-active-route class="menu-item-link" asp-area="" asp-controller="Home" asp-action="Privacy">Услуги</a>
+                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Services">Услуги</a>
                         </li>
                         <li class="menu-item m-2">
-                            <a is-active-route class="menu-item-link" asp-area="" asp-controller="Home" asp-action="Privacy">Контакты</a>
+                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Contacts">Контакты</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-0 d-flex flex-column align-items-md-end">
@@ -40,7 +44,7 @@
                             <a href="">+7 (861) 217-61-67</a>
                         </li>
                         <li class="menu-contact-action">
-                            <a asp-area="" asp-controller="Home" asp-action="Privacy">Получить консультацию</a>
+                            <a class="menu-item-link" asp-area="" asp-controller="Home" asp-action="Index">Получить консультацию</a>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +55,7 @@
         @RenderBody()
     </main>
 
-    <footer class="border-top footer text-muted">
+    <footer class="">
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
