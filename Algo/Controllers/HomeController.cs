@@ -24,8 +24,17 @@ namespace Algo.Controllers
         {
             return View();
         }
+        public IActionResult Contacts()
+        {
+            return View();
+        }
 
-        public IActionResult Privacy()
+        public IActionResult Portfolio()
+        {
+            return View();
+        }
+
+        public IActionResult Services()
         {
             return View();
         }

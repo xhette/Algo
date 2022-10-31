@@ -30,10 +30,10 @@
                             <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Products">Наши продукты</a>
                         </li>
                         <li class="menu-item m-2">
-                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Portfolio">Портфолио</a>
+                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Services">Услуги</a>
                         </li>
                         <li class="menu-item m-2">
-                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Services">Услуги</a>
+                            <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Portfolio">Портфолио</a>
                         </li>
                         <li class="menu-item m-2">
                             <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Contacts">Контакты</a>
@@ -59,14 +59,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="wt-nav d-flex flex-row align-items-center justify-content-between p-5">
-                        <a href="/"><img src="/img/logo.png" class="mainlogo"></a>
-                        <div class="">
-                            <a class="m-2" href="/">О нас</a>
-                            <a class="m-2" href="/?page_id=13">Наши продукты</a>
-                            <a class="m-2" href="/?page_id=15">Услуги</a>
-                            <a class="m-2" href="/?page_id=463">Портфолио</a>
-                            <a class="m-2" href="/?page_id=19">Контакты</a>
+                    <nav class="wt-nav d-flex flex-row align-items-center p-5">
+                        <div class="d-flex flex-column flex-grow-0 mx-5">
+                            <a href="/"><img src="/img/logo.png" class="mainlogo"></a>
+                            <p class="footer-nav-privacy my-3">
+                                ООО «Алгоритм» 2021. Официальный сайт. Данный сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) ГК РФ
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column footer-nav flex-grow-1 mx-5">
+                            <a asp-controller="Home" asp-action="Index">О нас</a>
+                            <a asp-controller="Home" asp-action="Products">Наши продукты</a>
+                            <a asp-controller="Home" asp-action="Services">Услуги</a>
+                            <a asp-controller="Home" asp-action="Portfolio">Портфолио</a>
+                            <a asp-controller="Home" asp-action="Contacts">Контакты</a>
                         </div>
                         <div class="foo-soc">
                             <a href=""><img src="/wp-content/uploads/2018/10/fb.png" alt=""></a>
