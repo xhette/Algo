@@ -12021,3 +12021,43 @@ h6, .h6 {
   opacity: 1;
   text-decoration: none;
 }
+
+.main-geo-wrp {
+  background: url("../img/map-bg.svg") no-repeat 0% 100%;
+  background-size: cover;
+}
+
+.wt-footer {
+  position: relative;
+  color: #FFFFFF;
+  background-color: var(--wt-green);
+  font-size: 16px;
+  font-family: "Montserrat", "Arial Unicode MS", Helvetica, Sans-Serif;
+  line-height: 175%;
+  text-align: center;
+  padding: 0;
+  background-size: 100%;
+  margin-top: 5em;
+}
+
+.wt-footer a {
+  color: var(--wt-orange);
+  text-decoration: none;
+}
+
+.wt-footer a:hover {
+  color: var(--wt-dark-orange);
+  text-decoration: none;
+}
+
+.wt-footer::before {
+  content: "";
+  position: absolute;
+  top: -3em;
+  height: 3em;
+  display: block;
+  background: url(../img/footer.png) no-repeat;
+  background-size: cover;
+  z-index: 999;
+  width: 100%;
+}
