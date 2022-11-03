@@ -11865,7 +11865,12 @@ h6, .h6 {
   --wt-dark-mint: #03B187;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
+  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12000,6 +12005,11 @@ body::-webkit-scrollbar {
 .head-bg-ico4 {
   background: url(../img/ico4.png) no-repeat 50% 0;
   padding-top: 100px;
+}
+
+.main-img img {
+  object-fit: contain;
+  width: 100%;
 }
 
 .main-right-ico {
