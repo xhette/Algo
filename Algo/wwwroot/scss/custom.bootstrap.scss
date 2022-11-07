@@ -340,3 +340,24 @@ body::-webkit-scrollbar {
     line-height: 24px;
     color: #747D88;
 }
+
+.product-annotation {
+    font-family: 'Roboto', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2B2B2B;
+}
+
+.product-subtitle h3 {
+    font-family: 'Montserrat', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 28px;
+    color: #2B2B2B;
+}
+.product-subtitle i {
+    color: var(--wt-orange);
+}
