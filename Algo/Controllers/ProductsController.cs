@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using System.ComponentModel.DataAnnotations;
+
 namespace Algo.Controllers
 {
     public class ProductsController : Controller

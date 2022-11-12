@@ -1,0 +1,38 @@
+﻿
+@{
+   
+}
+
+
+<div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Home" asp-action="Index" itemprop="item"><span itemprop="name">Главная</span></a>
+                    </span><span class="breadcrumbs__separator"> › </span>
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Products" asp-action="Index" itemprop="item"><span itemprop="name">Продукты</span></a></span>
+                        <span class="breadcrumbs__separator"> › </span>
+                    <span class="breadcrumbs__current"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="products-header">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-12">
+                <h1 class="wt-postheader entry-title">@*@Model.Title*@</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="products-wrapper mb-5">
+    <div class="container">
+        
+    </div>
+</div>

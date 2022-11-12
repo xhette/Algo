@@ -1,5 +1,95 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Home" asp-action="Index" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </span><span class="breadcrumbs__separator"> › </span>
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Services" asp-action="Index" itemprop="item"><span itemprop="name">Услуги</span></a>
+                        <meta itemprop="position" content="1">
+                    </span><span class="breadcrumbs__separator"> › </span>
+                    <span class="breadcrumbs__current">Системная интеграция</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="products-header">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-12">
+                <h1 class="wt-postheader entry-title">Системная интеграция</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="services-wrapper">
+    <div class="container">
+        <div class="row mt-3 mb-5">
+            <div class="col-12 product-annotation">
+                <p>
+                    «Алгоритм» занимается интеграцией собственных продуктов в неорганизованные системы предприятий малого и крупного бизнеса для улучшения различных показателей эффективности и качества.
+                </p>
+                <p>
+                    Накопленный опыт интеграции корпоративных продуктов, интеграции API и встроенной разработки позволяет компании «Алгоритм» связывать многочистенные конечные точки устройств, приложений и сервисов. Мы предоставляем в режиме реального времени комбинацию данных от интеллектуальных потребительских и промышленных устройств, корпоративных систем, решений для пользовательской аналитики данных и облачных платформ.
+                </p>
+            </div>
+        </div>
+        <div class="product-paragraph mb-5">
+            <div class="row mt-3 mb-3">
+                <div class="col-12 product-subtitle">
+                    <h3>
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        Системная интеграция включают в себя:
+                    </h3>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_sisinteg04.svg" alt="" />
+                    <h4 class="my-2">
+                        Подбор оборудования
+                    </h4>
+                    <p class="my-2">
+                        Для каждого проекта существуют индивидуальные условия и если потребуется, то мы подберем необходимое оборудование.
+                    </p>
+                </div>
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_sisinteg03.svg" alt="" />
+                    <h4 class="my-2">
+                        Проектная документация
+                    </h4>
+                    <p class="my-2">
+                        Наши специалисты разработают под ваш проект индивидуальлную проектную документацию.
+                    </p>
+                </div>
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_sisinteg02.svg" alt="" />
+                    <h4 class="my-2">
+                        Анализ
+                    </h4>
+                    <p class="my-2">
+                        Перед началом работы мы проводим анализ всего оборудования на предмет совместимости.
+                    </p>
+                </div>
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_sisinteg01.svg" alt="" />
+                    <h4 class="my-2">
+                        Проверка
+                    </h4>
+                    <p class="my-2">
+                        Для эффективного тестирования мы организуем демо и пилотные зоны.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+<script src="https://kit.fontawesome.com/4a4d023532.js" crossorigin="anonymous"></script>
+    }

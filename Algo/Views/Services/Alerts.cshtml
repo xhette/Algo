@@ -1,5 +1,44 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Home" asp-action="Index" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </span><span class="breadcrumbs__separator"> › </span>
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Services" asp-action="Index" itemprop="item"><span itemprop="name">Услуги</span></a>
+                        <meta itemprop="position" content="1">
+                    </span><span class="breadcrumbs__separator"> › </span>
+                    <span class="breadcrumbs__current">Системы оповещения и управления эвакуацией</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="products-header">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-12">
+                <h1 class="wt-postheader entry-title">Системы оповещения и управления эвакуацией</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="services-wrapper">
+    <div class="container">
+        <div class="row mt-3 mb-5">
+            <div class="col-12 product-annotation">
+               
+            </div>
+        </div>
+        <div class="product-paragraph mb-5">
+        </div>
+    </div>
+</div>
+@section Scripts {
+<script src="https://kit.fontawesome.com/4a4d023532.js" crossorigin="anonymous"></script>
+    }

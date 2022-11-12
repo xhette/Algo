@@ -8,7 +8,7 @@
                         <meta itemprop="position" content="1">
                     </span><span class="breadcrumbs__separator"> › </span>
                     <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a class="breadcrumbs__link" asp-controller="Home" asp-action="Index" itemprop="item"><span itemprop="name">Услуги</span></a>
+                        <a class="breadcrumbs__link" asp-controller="Services" asp-action="Index" itemprop="item"><span itemprop="name">Услуги</span></a>
                         <meta itemprop="position" content="1">
                     </span><span class="breadcrumbs__separator"> › </span>
                     <span class="breadcrumbs__current">Техподдержка и обслуживание</span>
@@ -37,27 +37,81 @@
             </div>
         </div>
         <div class="product-paragraph mb-5">
-        <div class="row mt-3 mb-3">
-            <div class="col-12 product-subtitle">
-               <h3>
-                   <i class="fa-solid fa-circle-chevron-right"></i>
-                   Почему именно мы?
-               </h3>
+            <div class="row mt-3 mb-3">
+                <div class="col-12 product-subtitle">
+                    <h3>
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        Почему именно мы?
+                    </h3>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_support04.svg" alt="" />
+                    <h4 class="my-2">
+                        Цена!
+                    </h4>
+                    <p class="my-2">
+                        Как правило, содержать штат сотрудников дороже.
+                    </p>
+                </div>
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_support03.svg" alt="" />
+                    <h4 class="my-2">
+                        Единая система
+                    </h4>
+                    <p class="my-2">
+                        Все системы находящиеся на обслуживании подключаются к нашей единой системе мониторинга, что позволяет специалистам узнавать о неисправностях моментально.
+                    </p>
+                </div>
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_support05.svg" alt="" />
+                    <h4 class="my-2">
+                        Профессионализм
+                    </h4>
+                    <p class="my-2">
+                        Наши сотрудники всегда проходят ежеквартальное обучение. Изучая все нововведения и тонкости работы.
+                    </p>
+                </div>
+                <div class="col-md-3 product-icon-item d-flex flex-column align-items-center justify-content-start">
+                    <img class="my-3" src="~/img/icn_support02.svg" alt="" />
+                    <h4 class="my-2">
+                        Работам до конца
+                    </h4>
+                    <p class="my-2">
+                        Мы всегда стараемся сделать еще лучше.
+                    </p>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
         <div class="product-paragraph mb-5">
-        <div class="row mt-3 mb-3">
-            <div class="col-12 product-subtitle">
-               <h3>
-                   <i class="fa-solid fa-circle-chevron-right"></i>
-                   Варианты технического обслуживания:
-               </h3>
-        </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-12 product-subtitle">
+                    <h3>
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                        Варианты технического обслуживания:
+                    </h3>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <ol class="product-variants-list">
+                        <li>
+                            <b>Удаленно:</b> в случае выявления неисправностей, мы связываемся с сотрудниками заказчика и консультируем о том, как устранить неисправность.
+                        </li>
+                        <li>
+                            <b>Локальное ежемесячное:</b> специалисты нашей компании или компаний партнеров ежемесячно посещают объект и выполняют работы.
+                        </li>
+                        <li>
+                            <b>Локальное в случае поломки:</b> когда нет необходимости в постоянном присутствии но для восстановления системы необходимы наши специалисты.
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+</div>
 
-    @section Scripts {
-    <script src="https://kit.fontawesome.com/4a4d023532.js" crossorigin="anonymous"></script>
+@section Scripts {
+<script src="https://kit.fontawesome.com/4a4d023532.js" crossorigin="anonymous"></script>
     }

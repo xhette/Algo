@@ -1,0 +1,20 @@
+﻿<ul class="products-list">
+    <li class="products-list-item @(@ViewData["tab"]?.ToString() == "ecomonitoring" ? "active" : "")">
+       <a asp-action="Monitoring" asp-controller="Services" asp-route-id="1">Системы экомониторинга</a> 
+    </li>
+    <li class="products-list-item @(@ViewData["tab"]?.ToString() == "subwater-monitoring" ? "active" : "")">
+       <a asp-action="Monitoring" asp-controller="Services" asp-route-id="2">Системы мониторинга паводков</a> 
+    </li>
+    <li class="products-list-item @(@ViewData["tab"]?.ToString() == "seismological-monitoring" ? "active" : "")">
+       <a asp-action="Monitoring" asp-controller="Services" asp-route-id="3">Системы сейсмологического мониторинга</a> 
+    </li>
+    <li class="products-list-item @(@ViewData["tab"]?.ToString() == "gaz-monitoring" ? "active" : "")">
+       <a asp-action="Monitoring" asp-controller="Services" asp-route-id="4">Системы газоанализа</a> 
+    </li>
+    <li class="products-list-item @(@ViewData["tab"]?.ToString() == "integrity-monitoring" ? "active" : "")">
+       <a asp-action="Monitoring" asp-controller="Services" asp-route-id="5">Системы контроля целостности конструкций</a> 
+    </li>
+    <li class="products-list-item @(@ViewData["tab"]?.ToString() == "water-monitoring" ? "active" : "")">
+       <a asp-action="Monitoring" asp-controller="Services" asp-route-id="6">Системы контроля уровня в емкостях</a> 
+    </li>
+</ul>

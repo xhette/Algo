@@ -1,5 +1,94 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Algo.Controllers.MonitoringInfoModel
 @{
+    ViewData["tab"] = ViewBag.Tab;
 }
+
+
+<div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Home" asp-action="Index" itemprop="item"><span itemprop="name">Главная</span></a>
+                    </span><span class="breadcrumbs__separator"> › </span>
+                    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="breadcrumbs__link" asp-controller="Services" asp-action="Index" itemprop="item"><span itemprop="name">Услуги</span></a></span>
+                        <span class="breadcrumbs__separator"> › </span>
+                    <span class="breadcrumbs__current">@Model.Title</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="products-header">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-12">
+                <h1 class="wt-postheader entry-title">@Model.Title</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="products-wrapper mb-5">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12 d-flex flex-row justify-content-center">
+                <img src="@Model.ImageURL" alt="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-12">
+                <partial name="~/Views/Shared/_MonitoringNavPartial.cshtml" view-data="ViewData" />
+            </div>
+            <div class="col-md-9 col-12 px-5 products-descriptions">
+                <h3>@Model.Title</h3>
+                @if (!string.IsNullOrEmpty(Model.Subtitle))
+                {
+                    <h4>@Model.Subtitle</h4>
+                }
+
+                <p>
+                    <b>Описание: </b>@Model.Description
+                </p>
+                 @if (Model.Facilities != null && Model.Facilities.Count() > 0)
+                {
+                    <h4>Применяется на следующих объектах: </h4>
+                    <ul>
+                        @foreach(var item in Model.Facilities)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+                }
+                 @if (Model.Includes != null && Model.Includes.Count() > 0)
+                {
+                    <h4>@Model.Title включает: </h4>
+                    <ul>
+                        @foreach(var item in Model.Includes)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+                }
+
+                 @if (!string.IsNullOrEmpty(Model.UseArea))
+                {
+                    <h4>Область использования: </h4>
+                    <p>
+                        @Model.UseArea
+                    </p>
+                }
+
+                 @if (!string.IsNullOrEmpty(Model.Solution))
+                {
+                    <h4>Создавая эти системы, мы решаем следующие задачи: </h4>
+                    <p>
+                        @Model.Solution
+                    </p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

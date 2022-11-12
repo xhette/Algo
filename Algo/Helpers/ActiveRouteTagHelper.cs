@@ -22,6 +22,9 @@ namespace Algo.Helpers
         [HtmlAttributeName("active-route-check")]
         public bool IsActiveRouteCheck { get; set; }
 
+        [HtmlAttributeName("active-route-ignoreAction")]
+        public bool IgnoreAction { get; set; }
+
 
         /// <summary>Additional parameters for the route.</summary>
         [HtmlAttributeName("asp-all-route-data", DictionaryAttributePrefix = "asp-route-")]
@@ -73,9 +76,12 @@ namespace Algo.Helpers
                 return false;
             }
 
-            if (!string.IsNullOrWhiteSpace(Action) && Action.ToLower() != currentAction.ToLower())
+            if (!IgnoreAction)
             {
-                return false;
+                if (!string.IsNullOrWhiteSpace(Action) && Action.ToLower() != currentAction.ToLower())
+                {
+                    return false;
+                }
             }
 
             foreach (KeyValuePair<string, string> routeValue in RouteValues)
