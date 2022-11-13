@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<Algo.Controllers.ProductList>
+
+@{
     //ViewData["Title"] = "Наши продукты";
 }
 
@@ -35,55 +37,39 @@
                     <h5 class="product-title">Продукты на основе «СМИС»</h5>
                 </div>
             </div>
-            <div class="row my-2 product-platform align-items-center">
-                <div class="col-md-2 col-12 d-flex align-items-start product-image">
-                    <img src="/img/image 31.png" alt="" />
+            @foreach (var product in Model)
+            {
+                <div class="row my-2 product-platform align-items-center">
+                    <div class="col-md-2 col-12 d-flex align-items-start product-image">
+                        <img src="/img/image 31.png" alt="" />
+                    </div>
+                    <div class="col-md-10 col-12 d-flex flex-column product-platform-description">
+                        <h4 class="mb-3">@product.Product.Name</h4>
+                        <p>
+                            @product.Product.Description''
+                        </p>
+                        <a asp-action="ProductInfo" asp-controller="Products" class="btn-wt-md btn-mint align-self-start">Подробнее</a>
+                    </div>
                 </div>
-                <div class="col-md-10 col-12 d-flex flex-column product-platform-description">
-                   <h4 class="mb-3">ПТК «ТИСАМ»</h4>
-                   <p>
-                       Современная высокотехнологичная платформа IIoT объединяющая в себе решения по мониторингу состояния, диагностике и оптимизации систем разного типа и уровней сложности.
-                   </p>
-                   <a href="#" class="btn-wt-md btn-mint align-self-start">Подробнее</a>
-                </div>
-            </div>
-            <div class="row my-2 product-platform-item align-items-center">
-                <div class="col-md-2 col-12 d-flex align-items-start product-image">
-                    <img src="/img/image 31.png" alt="" />
-                </div>
-                <div class="col-md-10 col-12 d-flex flex-column product-platform-description">
-                   <h4 class="mb-3">Устройство измерения: А-УИ-1РЛ</h4>
-                   <p>
-                      Современная высокотехнологичная платформа IIoT объединяющая в себе решения по мониторингу состояния, диагностике и оптимизации систем разного типа и уровней сложности.
-                   </p>
-                   <a href="#" class="btn-wt-md btn-mint align-self-start">Подробнее</a>
-                </div>
-            </div>
-            <div class="row my-2 product-platform-item align-items-center">
-                <div class="col-md-2 col-12 d-flex align-items-start product-image">
-                    <img src="/img/image 31.png" alt="" />
-                </div>
-                <div class="col-md-10 col-12 d-flex flex-column product-platform-description">
-                   <h4 class="mb-3">Устройство измерения: А-УИ-1ПС</h4>
-                   <p>
-                      Современная высокотехнологичная платформа IIoT объединяющая в себе решения по мониторингу состояния, диагностике и оптимизации систем разного типа и уровней сложности.
-
-                   </p>
-                   <a href="#" class="btn-wt-md btn-mint align-self-start">Подробнее</a>
-                </div>
-            </div>
-            <div class="row my-2 product-platform align-items-center">
-                <div class="col-md-2 col-12 d-flex align-items-start product-image">
-                    <img src="/img/image 31.png" alt="" />
-                </div>
-                <div class="col-md-10 col-12 d-flex flex-column product-platform-description">
-                   <h4 class="mb-3">ПТК «Горизонт»</h4>
-                   <p>
-                       Современная высокотехнологичная платформа IIoT объединяющая в себе решения по мониторингу состояния, диагностике и оптимизации систем разного типа и уровней сложности.
-                   </p>
-                   <a href="#" class="btn-wt-md btn-mint align-self-start">Подробнее</a>
-                </div>
-            </div>
+                @if (product.SubProducts != null)
+                {
+                    @foreach (var subproduct in product.SubProducts)
+                    {
+                        <div class="row my-2 product-platform-item align-items-center">
+                            <div class="col-md-2 col-12 d-flex align-items-start product-image">
+                                <img src="/img/image 31.png" alt="" />
+                            </div>
+                            <div class="col-md-10 col-12 d-flex flex-column product-platform-description">
+                                <h4 class="mb-3">@subproduct.Name</h4>
+                                <p>
+                                    @subproduct.Description
+                                </p>
+                                <a asp-action="ProductInfo" asp-controller="Products" class="btn-wt-md btn-mint align-self-start">Подробнее</a>
+                            </div>
+                        </div>
+                    }
+                }
+            }
         </div>
     </div>
 </div>

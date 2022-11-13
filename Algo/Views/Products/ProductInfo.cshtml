@@ -1,8 +1,6 @@
-﻿
-@{
-   
-}
+﻿@{
 
+}
 
 <div class="breadcrumbs-wrapper">
     <div class="container">
@@ -13,9 +11,10 @@
                         <a class="breadcrumbs__link" asp-controller="Home" asp-action="Index" itemprop="item"><span itemprop="name">Главная</span></a>
                     </span><span class="breadcrumbs__separator"> › </span>
                     <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a class="breadcrumbs__link" asp-controller="Products" asp-action="Index" itemprop="item"><span itemprop="name">Продукты</span></a></span>
-                        <span class="breadcrumbs__separator"> › </span>
-                    <span class="breadcrumbs__current"></span>
+                        <a class="breadcrumbs__link" asp-controller="Products" asp-action="Index" itemprop="item"><span itemprop="name">Продукты</span></a>
+                    </span>
+                    <span class="breadcrumbs__separator"> › </span>
+                    <span class="breadcrumbs__current">Расходомеры</span>
                 </div>
             </div>
         </div>
@@ -26,13 +25,162 @@
     <div class="container">
         <div class="row my-3">
             <div class="col-12">
-                <h1 class="wt-postheader entry-title">@*@Model.Title*@</h1>
+                <h1 class="wt-postheader entry-title">60F-22-66-31BL</h1>
             </div>
         </div>
     </div>
 </div>
 <div class="products-wrapper mb-5">
     <div class="container">
-        
+        <div class="row flex-grow-1">
+            <div class="col-md-5 col-12">
+                <div class="product-description-wrapper py-3 h-100 px-5">
+                    <div id="carouselProductIndicators" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="~/img/image 31.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="~/img/image 31.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="~/img/image 31.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductIndicators" data-bs-slide="prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProductIndicators" data-bs-slide="next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselProductIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselProductIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselProductIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-12">
+                <div class="product-description-wrapper py-3 px-5 h-100 d-flex flex-column">
+                    <div class="row product-description-links my-2">
+                        <div class="col-12 d-flex flex-row justify-content-end">
+                            <a href="#"><i class="fa-solid fa-star"></i> Избранное</a>
+                            <a href="#"><i class="fa-solid fa-list"></i> Сравнить</a>
+                            <a href="#"><i class="fa-solid fa-print"></i> Печать</a>
+                        </div>
+                    </div>
+
+                    <div class="row my-3 flex-grow-1 justify-self-center">
+                        <div class="col-12 py-3">
+                            <h4>Шкаф телекоммуникационный 19"</h4>
+                            <div class="d-flex flex-row align-items-center my-2">
+                                <div class="product-desc-item me-2 my-2">
+                                    <span class="product-desc-item-name">
+                                        Код:
+                                    </span>
+                                    293924
+                                </div>
+                                <div class="product-desc-item my-2 my-2">
+                                    <span class="product-desc-item-name">
+                                        Производитель:
+                                    </span>
+                                    Eurolan
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center my-2">
+                                <div class="product-desc-item me-2 my-2">
+                                    <span class="product-desc-item-name">
+                                        Функционал:
+                                    </span>
+                                    Шкаф телекоммуникационный 19"
+                                </div>
+                                <div class="product-desc-link my-2">
+                                    <a href="#"><i class="fa-solid fa-copy"></i> Подобрать похожие</a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center mt-3">
+                                <div class="d-flex flex-column price-colored-wrapper me-3">
+                                    <span>52 434,41 ₽/шт</span>
+                                    Розничная цена
+                                </div>
+                                <div class="d-flex flex-column price-wrapper">
+                                    <span>44 569,25 ₽/шт</span>
+                                    Оптовая цена
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center mt-3">
+                                <div class="d-flex flex-row align-items-center me-3">
+                                    <div class="input d-flex flex-row align-items-center">
+                                        <button class="input-inc-button" onclick="desc()"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="form-control input-inc" id="count" value="1" />
+                                        <button class="input-inc-button" onclick="inc()"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <button class="btn-wt-md btn-mint mx-2">В корзину</button>
+                                </div>
+                                <div class="product-desc-item me-2 my-3">
+                                    <span class="product-desc-item-name">
+                                        Доступность:
+                                    </span>
+                                    По запросу
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-12">
+                <div class="product-shop-description">
+                    <ul class="nav" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button id="description-tab" data-bs-toggle="tab" data-bs-target="#description-tab-pane" type="button" role="tab" aria-controls="description-tab-pane" aria-selected="true">Описание</button>
+                        </li>
+                        <li class="nav-pills" role="presentation">
+                            <button id="characteristics-tab" data-bs-toggle="tab" data-bs-target="#characteristics-tab-pane" type="button" role="tab" aria-controls="characteristics-tab-pane" aria-selected="false">Характеристики</button>
+                        </li>
+                        <li class="nav-pills" role="presentation">
+                            <button id="equipment-tab" data-bs-toggle="tab" data-bs-target="#equipment-tab-pane" type="button" role="tab" aria-controls="equipment-tab-pane" aria-selected="false">Комплектация</button>
+                        </li>
+                        <li class="nav-pills" role="presentation">
+                            <button id="documentation-tab" data-bs-toggle="tab" data-bs-target="#documentation-tab-pane" type="button" role="tab" aria-controls="documentation-tab-pane" aria-selected="false">Документация</button>
+                        </li>
+                        <li class="nav-pills" role="presentation">
+                            <button id="instructions-tab" data-bs-toggle="tab" data-bs-target="#instructions-tab-pane" type="button" role="tab" aria-controls="instructions-tab-pane" aria-selected="false">Видеоинструкции</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content py-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel" aria-labelledby="description-tab" tabindex="0">
+                            Краткое описание: Шкаф телекоммуникационный 19" напольный 22U, 1140х600х600 мм (ВхШхГ), полезная глубина: 475 мм, распределенная нагрузка: 550 кг,передняя дверь стекл., задняя дверь метал.1-ств., цвет черный.
+                        </div>
+                        <div class="tab-pane fade" id="characteristics-tab-pane" role="tabpanel" aria-labelledby="characteristics-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="equipment-tab-pane" role="tabpanel" aria-labelledby="equipment-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="documentation-tab-pane" role="tabpanel" aria-labelledby="documentation-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="instructions-tab-pane" role="tabpanel" aria-labelledby="instructions-tab" tabindex="0">...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+@section Scripts {
+<script src="https://kit.fontawesome.com/4a4d023532.js" crossorigin="anonymous"></script>
+
+<script>
+    function inc() {
+        var val =  Number(document.getElementById('count').value);
+       document.getElementById('count').value = val + 1;
+    }
+    function desc() {
+        var val =  Number(document.getElementById('count').value);
+        if (val > 1){
+            document.getElementById('count').value = val - 1;
+        }
+    }
+</script>
+    }
