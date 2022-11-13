@@ -34,17 +34,20 @@
                         </li>
                         @*<li class="menu-item m-2">
                             <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Portfolio">Портфолио</a>
-                        </li>*@
+                            </li>*@
                         <li class="menu-item m-2">
                             <a class="menu-item-link" active-route-check="true" asp-controller="Home" asp-action="Contacts">Контакты</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-0 d-flex flex-column align-items-md-end">
                         <li class="menu-contact-tel">
-                            <a href="tel:+78612176167">+7 (861) 217-61-67</a>
+                            <a href="tel:+78612176167">
+                                <img src="~/img/tel.png" alt="" class="mx-1" />
+                                +7 (861) 217-61-67
+                            </a>
                         </li>
                         <li class="menu-contact-action">
-                            <a class="menu-item-link" asp-area="" asp-controller="Home" asp-action="Index">Получить консультацию</a>
+                            <a class="menu-item-link" href="#modal_call_me" data-bs-toggle="modal" data-bs-target="#modal_call_me">Получить консультацию</a>
                         </li>
                     </ul>
                 </div>
@@ -88,3 +91,29 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<div class="modal fade" id="modal_call_me" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                <h3>Получите консультацию</h3>
+                <p>Мы свяжемся с вами в ближайшее время</p>
+                <input class="form-control my-2" placeholder="Ваше имя" type="text">
+                <input class="form-control my-2" placeholder="Ваш Email" type="email">
+                <input class="form-control my-2" placeholder="Ваш телефон" type="tel">
+                <div class="form-check my-2">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Я согласен на обработку моих персональных данных в соответсвии с <a href="#">Условиями политики конфиденциальности</a>
+                    </label>
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center mt-4 w-100">
+                    <button type="button" class="btn-wt-lg btn-orange w-100">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

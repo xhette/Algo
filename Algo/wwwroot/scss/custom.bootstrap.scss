@@ -53,6 +53,9 @@ body::-webkit-scrollbar {
     color: #ffffff !important;
     border: none !important;
 }
+a.btn-orange {
+   text-decoration: none;
+}
 
 .btn-orange:hover, .btn-orange:active, .btn-orange:focus {
     background-color: var(--wt-dark-orange) !important;
@@ -66,6 +69,9 @@ body::-webkit-scrollbar {
     box-shadow: 0 0 5px rgb(74 207 159 / 40%);
     text-decoration: none;
     border: none !important;
+}
+a.btn-mint {
+    text-decoration: none;
 }
 
 .btn-mint:hover, .btn-mint:active, .btn-mint:focus {
@@ -551,4 +557,206 @@ ol.product-variants-list li:before {
     line-height: 28px;
     margin-bottom: .5em;
     color: #000000;
+}
+
+.developnet-service-wrapper {
+    font-family: 'Roboto', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    border: 3px solid var(--wt-mint);
+    border-radius: 8px;
+    padding: 3em 2em;
+    font-size: 16px;
+    line-height: 20px;
+    color: #747D88;
+}
+
+.developnet-service-wrapper h3 {
+    color: #000;
+    font-size: 28px;
+    line-height: 28px;
+    font-family: 'Montserrat', 'Arial Unicode MS', Helvetica, Sans-Serif;
+
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 3px solid var(--wt-mint);
+}
+
+.developnet-service-wrapper b {
+    color: #2B2B2B;
+    font-weight: 700;
+}
+
+.developnet-service-wrapper .price {
+    color: var(--wt-green);
+    font-size: 22px;
+
+    margin: 1.5em 0;
+}
+
+.developnet-service-wrapper ul {
+    list-style: none;
+}
+.developnet-service-wrapper ul li::before {
+    content: "\2022";
+    color: var(--wt-orange);
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em; 
+}
+
+.development-types-wrapper {
+    background-image: url("../img/bg-po.png");
+}
+
+.development-types-wrapper h3 {
+    color: white;
+}
+
+.po-icon-inner {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Roboto";
+    border: 3px solid var(--wt-mint);
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1em;
+    position: relative;
+    height: 100%!important;
+
+    margin-left: 1.5em;
+    padding-left: 2em;
+}
+
+.po-icon-inner::before {
+    width: 1em;
+    content: url("../img/bg-po2.png");
+    position: absolute;
+    height: 80px;
+    width: 270px;
+
+    left:-1.5em;
+}
+
+.main-primer-h {
+    color: #747D88;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: lighter;
+    font-family: 'Montserrat', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.carousel-wt-control {
+    background: var(--wt-mint);
+    color: white;
+    height: 5em;
+    /*width: 5em;*/
+    margin: auto;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.carousel-wt-control {
+    width: 0px;
+    transition: .2s;
+}
+
+
+#carouselControls:hover .carousel-wt-control {
+    width: 5em;
+    opacity: .8;
+}
+
+.development-example-slide img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.development-example-slide-content {
+    border: 3px solid var(--wt-mint);
+    border-radius: 8px;
+}
+
+.development-example-slide-content h3 {
+    color: var(--wt-green);
+    font-size: 28px;
+    font-family: 'Montserrat', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 120%;
+}
+
+.development-example-slide-content p {
+    font-size: 16px;
+    color: #2B2B2B;
+    font-family: 'Montserrat', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: .5em;
+}
+
+.carousel-inner {
+    min-height: 30rem!important;
+    display: flex;
+    align-items:center;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: none;
+    color: white;
+}
+
+.modal-body {
+    font-family: 'Roboto', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    padding: 2em 3em;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    color: #777777;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.modal-body a {
+   color: var(--wt-orange);
+}
+
+.modal-body h3 {
+    font-family: 'Roboto', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-weight: 300;
+    margin-bottom: .3em;
+    font-size: 22px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.modal-body p {
+    font-family: 'Roboto', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 1em;
+}
+
+.modal-body input {
+    font-family: 'Roboto', 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.contacts-wrapper {
+    font-family: 'Montserrat', 'Arial Unicode MS', Helvetica, Sans-Serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.contacts-wrapper a {
+    text-decoration: none;
+}
+.contacts-wrapper a:hover {
+    text-decoration: underline;
 }
