@@ -889,8 +889,12 @@ ol.product-variants-list li:before {
     border: 2px solid var(--wt-orange)!important;
 }
 
-#carouselProductIndicators button {
-    color: hsla(169, 22%, 88%, 1);
+#carouselProductIndicators .carousel-control-prev, #carouselProductIndicators .carousel-control-next {
+    color: hsla(169, 22%, 88%, 1)!important;
+}
+
+#carouselProductIndicators button[aria-current="true"] {
+
 }
 
 .product-shop-description .tab-content {

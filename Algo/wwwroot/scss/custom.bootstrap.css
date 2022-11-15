@@ -12738,8 +12738,8 @@ ol.product-variants-list li:before {
   border: 2px solid var(--wt-orange) !important;
 }
 
-#carouselProductIndicators button {
-  color: #dae7e5;
+#carouselProductIndicators .carousel-control-prev, #carouselProductIndicators .carousel-control-next {
+  color: #dae7e5 !important;
 }
 
 .product-shop-description .tab-content {
