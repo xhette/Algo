@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container body-container">
+    <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-6">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="card-body p-md-5 mx-md-4">
+                                <div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+                                    <ul>
+                                        <li style="display:none"></li>
+                                    </ul>
+                                </div>
+
+                                <form asp-action="Login" asp-controller="Admin" method="post">
+
+                                    <div class="form-outline mb-4">
+                                        <label for="Username">Имя пользователя</label>
+                                        <input class="form-control" data-inputmask="'mask': '+7(999) 999-99-99'" autofocus="" type="text" data-val="true" data-val-required="Укажите имя пользователя" id="Username" name="Username" value="" inputmode="text">
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label for="Password">Пароль</label>
+                                        <input type="password" class="form-control" autocomplete="off" data-val="true" data-val-length="Минимальная длинна данных в поле &quot;Пароль&quot; должна быть не меньше 8 символов" data-val-length-max="50" data-val-length-min="8" data-val-required="Укажите пароль" id="Password" maxlength="50" name="Password">
+                                    </div>
+
+
+                                    <div class="row mb-4">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" checked="" type="checkbox" data-val="true" data-val-required="The RememberLogin field is required." id="RememberLogin" name="RememberLogin" value="true">
+                                                <label class="form-check-label" for="RememberLogin">Запомнить меня</label>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex justify-content-end">
+                                            <a asp-action="ResetPassword" asp-controller="Admin">Забыли пароль?</a>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4 d-grid gap-2">
+                                        <button type="submit" class="btn-wt-md btn-orange">Войти</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
